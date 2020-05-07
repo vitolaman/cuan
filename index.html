@@ -29,7 +29,6 @@
 	<![endif]-->
 	<!-- email -->
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script src="coba.js"></script>
 </head>
 <body>
 	<!-- Page Preloder -->
@@ -214,10 +213,11 @@
 				<div class="col-lg-6">
 					<div class="sub-text">
 						<center>
-						<form action="coba.html" method="post">
-						<h3>Email:</h3>
-						<input name="email" id="email" class="form-control" type="email" required placeholder="Enter your email address " style="margin-bottom: 30px;">
-						<button type="submit" id="submit" name="submit" class="site-btn">Send <i class="fas fa-paper-plane"></i></button>
+						<form method="post">
+							<h3>Email:</h3>
+							<input name="email" id="email" class="form-control" type="email" required placeholder="Enter your email address " style="margin-bottom: 30px;">
+							<!-- <button type="submit" id="submit" name="submit" class="site-btn">Send <i class="fas fa-paper-plane"></i></button> -->
+							<input type="button" value="Send Email" onclick="sendEmail()"/>
 						</form>
 						</center>
 					</div>
@@ -275,5 +275,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://kit.fontawesome.com/09973102bd.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "michaelwidap@gmail.com",
+	Password : "michaelwp2807",
+	To : 'michaelwidap@gmail.com',
+	From : "michaelwida@gmail.com",
+	Subject : "yth",
+	Body : "sds",
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
+	</script>
 	</body>
 </html>
