@@ -277,17 +277,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://kit.fontawesome.com/09973102bd.js" crossorigin="anonymous"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script type="text/javascript">
-		
+		var email = document.getElementById("email").value;
 	Email.send({
 	Host: "mail.itnesia.id",
 	Username : "info@itnesia.id",
 	Password : "Cariduitg4n",
-	To : 'michaelwida@gmail.com, info@itnesia.id',
-	From : "info@itnesia.id",
+	To : 'info@itnesia.id',
+	From : email,
 	Subject : "coba",
 	Body : "email di coba gan",
 	}).then(
-		message => alert("sdos")
+		message => alert(message)
 	);
 
 	</script>
