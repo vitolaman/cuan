@@ -469,7 +469,8 @@ How section
  -------------------*/
 
 .how-section {
-	background-color: #0a183d;
+	background: rgb(10,24,61);
+	background: linear-gradient(180deg, rgba(10,24,61,1) 42%, rgba(118,14,71,1) 100%);
 }
 
 .how-item .hi-icon {
@@ -519,7 +520,8 @@ Subscription section
  -----------------------*/
 
 .subscription-section {
-	background: #0a183d;
+	background: rgb(10,24,61);
+	background: linear-gradient(180deg, rgba(10,24,61,1) 42%, rgba(118,14,71,1) 100%);
 }
 
 .sub-text {
@@ -600,7 +602,8 @@ Responsive
  -------------------*/
 
 .footer-section {
-	background: #0a183d;
+	background: rgb(10,24,61);
+	background: linear-gradient(180deg, rgba(10,24,61,1) 42%, rgba(118,14,71,1) 100%);
 	padding: 100px 0 85px;
 }
 
