@@ -78,15 +78,16 @@
 						<form class="contact-from" method="post" action="contact.php">
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" placeholder="Your name" name="nama">
+									<input type="text" id="nama" placeholder="Your name" name="nama">
 								</div>
 								<div class="col-md-6">
-									<input type="text" placeholder="Your e-mail" name="email">
+									<input type="text" id="email" placeholder="Your e-mail" name="email">
 								</div>
 								<div class="col-md-12">
-									<input type="text" placeholder="Subject" name="subject">
-									<textarea placeholder="Message" name="isi"></textarea>
-									<button type="submit" id="submit" name="submit" class="site-btn">Send <i class="fas fa-paper-plane"></i></button>
+									<input type="text" id="judul" placeholder="Subject" name="subject">
+									<textarea placeholder="Message" id="pesan" name="isi"></textarea>
+									<!-- <button type="submit" id="submit" name="submit" class="site-btn">Send <i class="fas fa-paper-plane"></i></button> -->
+									<button class="site-btn" onclick="sendEmail()">Send Email <i class="fas fa-paper-plane"></i></button>
 								</div>
 							</div>
 						</form>
@@ -120,5 +121,28 @@
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://kit.fontawesome.com/09973102bd.js" crossorigin="anonymous"></script>
+	<script src="smtp.js"></script>
+	<script type="text/javascript">
+		function sendEmail() {
+			var nama = document.getElementById("nama").value;
+			var email = document.getElementById("email").value;
+			var judul = document.getElementById("judul").value;
+			var pesan = document.getElementById("pesan").value;
+			Email.send({
+				Host: "mail.itnesia.id",
+				Username: "info@itnesia.id",
+				Password: "Cariduitg4n",
+				To: email + ',info@itnesia.id',
+				From: 'info@itnesia.id',
+				Subject: "Konfirmasi Pendaftar",
+				Body: '<h2>Konfirmasi Pendaftar : </h2>' + email,
+			}).then(
+				// message => alert("OK"),
+				document.getElementById('email').value = "",
+				alert("Terima Kasih")
+			);
+		}
+
+	</script>
 	</body>
 </html>
