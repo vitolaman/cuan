@@ -75,7 +75,7 @@
 							<li>081 232 528 421</li>
 							<li>info@itnesia.id</li>
 						</ul>
-						<form>
+						<form class="contact-from">
 							<div class="row">
 								<div class="col-md-6">
 									<input type="text" id="nama" placeholder="Your name" name="nama">
@@ -137,12 +137,12 @@
 				Subject: "judul",
 				Body: 'pesan'+nama,
 			}).then(
-				message => alert(message),
-				// document.getElementById('nama').value = "",
-				// document.getElementById('email').value = "",
-				// document.getElementById('judul').value = "",
-				// document.getElementById('pesan').value = "",
-				// alert("Terima Kasih")
+				// message => alert(message),
+				document.getElementById('nama').value = "",
+				document.getElementById('email').value = "",
+				document.getElementById('judul').value = "",
+				document.getElementById('pesan').value = "",
+				alert("Terima Kasih")
 			);
 		}
 
