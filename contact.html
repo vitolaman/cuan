@@ -138,7 +138,10 @@
 				Body: pesan,
 			}).then(
 				// message => alert("OK"),
+				document.getElementById('nama').value = "",
 				document.getElementById('email').value = "",
+				document.getElementById('judul').value = "",
+				document.getElementById('pesan').value = "",
 				alert("Terima Kasih")
 			);
 		}
