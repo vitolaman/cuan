@@ -84,8 +84,8 @@
 									<input type="email" id="email" placeholder="Your e-mail" name="email">
 								</div>
 								<div class="col-md-12">
-									<input type="text" id="wa" placeholder="No Whatapps" name="subject">
-									<textarea placeholder="Isi dengan nama Kelas (cth: Algoritma Pemrogramman Dasar)" id="kelas" name="isi"></textarea>
+									<input type="text" id="wa" placeholder="No Whatapps" >
+									<textarea placeholder="Isi dengan nama Kelas (cth: Algoritma Pemrogramman Dasar)" id="kelas"></textarea>
 									<!-- <button type="submit" id="submit" name="submit" class="site-btn">Send <i class="fas fa-paper-plane"></i></button> -->
 								</div>
 								<button class="site-btn" onclick="sendEmail()">Send Email <i class="fas fa-paper-plane"></i></button>
@@ -140,7 +140,7 @@
 				// message => alert(message),
 				document.getElementById('nama').value = "",
 				document.getElementById('email').value = "",
-				document.getElementById('judul').value = "",
+				document.getElementById('wa').value = "",
 				document.getElementById('kelas').value = "",
 				alert("Terima Kasih")
 			);
