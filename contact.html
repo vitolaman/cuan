@@ -85,7 +85,7 @@
 								</div>
 								<div class="col-md-12">
 									<input type="text" id="wa" placeholder="No Whatapps" name="subject">
-									<textarea placeholder="Isi dengan nama Kelas (cth: Algoritma Pemrogramman Dasar)" id="pesan" name="isi"></textarea>
+									<textarea placeholder="Isi dengan nama Kelas (cth: Algoritma Pemrogramman Dasar)" id="kelas" name="isi"></textarea>
 									<!-- <button type="submit" id="submit" name="submit" class="site-btn">Send <i class="fas fa-paper-plane"></i></button> -->
 								</div>
 								<button class="site-btn" onclick="sendEmail()">Send Email <i class="fas fa-paper-plane"></i></button>
@@ -126,16 +126,16 @@
 		function sendEmail() {
 			var nama = document.getElementById("nama").value;
 			var email = document.getElementById("email").value;
-			var judul = document.getElementById("judul").value;
+			var wa = document.getElementById("wa").value;
 			var pesan = document.getElementById("pesan").value;
 			Email.send({
 				Host: "mail.itnesia.id",
 				Username: "info@itnesia.id",
 				Password: "Cariduitg4n",
-				To: 'info@itnesia.id',
-				From: email,
-				Subject: judul,
-				Body: pesan+' '+nama,
+				To: email,
+				From: 'info@itnesia.id',
+				Subject: 'Konfirmasi Kelas Active',
+				Body: 'Selamat '+nama+' anda masuk dalam kelas '+kelas+' untuk mengaktifkan kelas silahkan anda mengirimkan bukti pembayar via Whatapss 08155043076<br>Salam Kami,<br>DevLearnt Tim.',
 			}).then(
 				// message => alert(message),
 				document.getElementById('nama').value = "",
